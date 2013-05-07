@@ -1,0 +1,32 @@
+ServerStatus ALPHA 1.0
+======================
+
+I guess that if you don't know how to implent this
+into your own project, you're reading this file.
+
+I'm good at guessing, aren't I?
+Anyhow... you'll be wanting to know how to install this,
+so just follow the four steps below and it should work.
+
+1, Open your Server project and import frmStatus.frm.
+2, View code for modGeneral, find Sub InitServer()
+3, Find		Call SetStatus("Spawning map npcs...")
+		Call SpawnAllMapNpcs
+4, Right below that, insert the following code:
+		Call SetStatus("Starting ServerStatus...")
+		Load frmStatus
+		DoEvents
+
+==========
+Well I guess that's that, and lets leave it at that.
+It should work, it's not done yet, it's sloppy.
+
+When you start your server next time, it should listen on one
+port number above the game port (GAME_PORT + 1)
+
+So now, all you have to do is visit http://ip:port/
+(replacing ip with YOUR ip, and port with the serverstatus port)
+
+That's all, my first so called "tutorial".
+
+//Cain
